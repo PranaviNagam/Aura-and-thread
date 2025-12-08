@@ -396,3 +396,105 @@ padding: 0px 20px;
   border-radius: 50%;
   font-weight: 500;
 }
+
+
+.products-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   📌 GLOBAL RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* 🔽 Extra Small Devices (Phones < 480px)  */
+@media (max-width: 479px) {
+  body {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .products-grid,
+  .cards,
+  .gallery {
+    grid-template-columns: 1fr !important;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 🔽 Small Devices (Phones 480px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .products-grid,
+  .cards,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 🔽 Medium Devices (Tablets 768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .products-grid,
+  .cards,
+  .gallery {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .hero-section {
+    flex-direction: row;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* 🖥 Large Devices (Desktops > 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
+
+  .products-grid,
+  .cards,
+  .gallery {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
